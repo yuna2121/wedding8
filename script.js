@@ -103,25 +103,7 @@ function loadMessages() {
         });
 }
 
-kakao.maps.load(function() {
-    var mapContainer = document.getElementById('map'),
-        mapOption = {
-            center: new kakao.maps.LatLng(37.5563, 127.0060), // Coordinates for 신라호텔 영빈관
-            level: 3 // Map zoom level
-        };
 
-    var map = new kakao.maps.Map(mapContainer, mapOption); // Create map
-
-    // Marker position
-    var markerPosition  = new kakao.maps.LatLng(37.5563, 127.0060); 
-
-    // Create marker
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-
-    marker.setMap(map); // Display the marker on the map
-});
 
 function shareLink() {
     const el = document.createElement('textarea');
