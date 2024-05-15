@@ -142,11 +142,6 @@ button.next {
     margin-top: 20px;
 }
 
-.map {
-    width: 100%;
-    height: 300px;
-    border: 2px solid black;
-}
 
 .share-buttons button {
     padding: 10px 20px;
