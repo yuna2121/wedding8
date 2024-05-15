@@ -136,50 +136,6 @@
         </footer>
     </div>
 
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d59123877a5163cbf1586b25970c56e2"></script>
-<script>
-    kakao.maps.load(function() {
-        var container = document.getElementById('map');
-        var options = {
-            center: new kakao.maps.LatLng(37.5563, 127.0060),
-            level: 3
-        };
-
-        // 지도 객체를 한 번만 생성합니다.
-        var map = new kakao.maps.Map(container, options);
-
-        // 마커 이미지 설정
-        var imageSrc = 'https://i.imgur.com/5DRhd88.png',
-            imageSize = new kakao.maps.Size(100, 80),
-            imageOption = {offset: new kakao.maps.Point(27, 69)};
-
-        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-            markerPosition = new kakao.maps.LatLng(37.5563, 127.0060);
-
-        // 마커 생성 및 지도에 추가
-        var marker = new kakao.maps.Marker({
-            position: markerPosition,
-            image: markerImage 
-        });
-        marker.setMap(map);
-
-        // 커스텀 오버레이 생성 및 추가
-        var content = '<div class="customoverlay">' +
-            '  <a href="https://m.map.kakao.com/actions/searchView?q=%EC%8B%A0%EB%9D%BC%ED%98%B8%ED%85%94%20%EC%98%81%EB%B9%88%EA%B4%80&wxEnc=MNSRQP&wyEnc=QOMOUTN&lvl=4#!/10528218/map/place" target="_blank">' +
-            '    <span class="title">신라호텔 영빈관</span>' +
-            '  </a>' +
-            '</div>';
-
-        var position = new kakao.maps.LatLng(37.5563, 127.0060);
-
-        var customOverlay = new kakao.maps.CustomOverlay({
-            map: map,
-            position: position,
-            content: content,
-            yAnchor: 0
-        });
-    });
-</script>
 
     <div class="share-buttons">
         <button onclick="shareKakao();">카카오톡으로 공유하기</button>
